@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nguyen Van A | Front-end Developer & UI/UX Designer</title>
+
+  <!-- ==============================================================
+       HOẠT ĐỘNG 3: TÍCH HỢP AOS (ANIMATE ON SCROLL) - CSS TỪ CDN
+       Thư viện cung cấp sẵn các hiệu ứng cuộn trang qua class CSS
+       ============================================================== -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- Phông chữ Google Fonts (Inter) tối giản & hiện đại -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- File CSS chính của dự án -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==============================================================
+       HOẠT ĐỘNG 2 – LOADING MASTER: MÀN HÌNH LOADING & CSS SPINNER
+       (Hoạt động 100% bằng Pure CSS: Flexbox căn giữa, keyframes xoay 
+       360 độ và keyframes tự động mờ dần biến mất mà KHÔNG CẦN JS)
+       ============================================================== -->
+  <div id="loader-wrapper" class="loader-wrapper" aria-label="Đang tải trang">
+    <div class="spinner" role="status"></div>
+    <p class="loader-text">Đang tải Portfolio...</p>
+  </div>
+
+  <!-- Thanh điều hướng (Header / Navbar) -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo">Dev<span>Portfolio</span></a>
+      <nav class="nav-links">
+        <a href="#about">Về tôi</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#projects">Dự án</a>
+        <a href="#contact" class="btn btn-outline btn-sm">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         HOẠT ĐỘNG 3: SECTION 1 - HERO SECTION
+         Hiệu ứng: data-aos="fade-up" với delay so le
+         ============================================================ -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-content">
+        <div class="hero-badge" data-aos="fade-up" data-aos-duration="600">
+          <span>👋 Xin chào! Tôi là Dinh Trung Hieu</span>
+        </div>
+        <h1 class="hero-title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          Xây dựng trải nghiệm Web <br><span class="gradient-text">Hiện đại, Tinh tế & Tối ưu</span>
+        </h1>
+        <p class="hero-desc" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          Front-end Developer & UI/UX Enthusiast đam mê kiến tạo các sản phẩm web đạt chuẩn 60 FPS,
+          giao diện chuẩn Responsive và trải nghiệm người dùng vượt trội.
+        </p>
+        <div class="hero-actions" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <a href="#projects" class="btn btn-primary">Xem Dự Án Của Tôi</a>
+          <a href="#contact" class="btn btn-secondary">Liên Hệ Ngay</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HOẠT ĐỘNG 3: SECTION 2 - ABOUT SECTION
+         Hiệu ứng: Cột trái "fade-right", Cột phải "fade-left", 
+         Thống kê dùng "zoom-in"
+         ============================================================ -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">Về Bản Thân</h2>
+          <p class="section-subtitle">Hành trình biến ý tưởng thiết kế thành hiện thực mã nguồn</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Cột trái: Xuất hiện từ bên trái (fade-right) -->
+          <div class="about-card" data-aos="fade-right" data-aos-duration="800" data-aos-delay="150">
+            <div class="avatar-box">
+              <div class="avatar-circle">
+                <span class="avatar-initials">VA</span>
+              </div>
+            </div>
+            <h3 class="about-name">Dinh Trung Hieu</h3>
+            <p class="about-role">Front-end Developer & UI Designer</p>
+            <p class="about-location">📍 Dong Nai, Việt Nam</p>
+          </div>
+
+          <!-- Cột phải: Xuất hiện từ bên phải (fade-left) -->
+          <div class="about-details" data-aos="fade-left" data-aos-duration="800" data-aos-delay="250">
+            <h3>Đam mê tạo ra các giải pháp số ấn tượng</h3>
+            <p>
+              Tôi tập trung vào việc tạo ra giao diện sạch sẽ, dễ tiếp cận và có tính tương tác cao.
+              Với kiến thức vững chắc về Semantic HTML5 và Modern CSS3, tôi luôn chú trọng 
+              tối ưu hóa hiệu năng render trình duyệt (Reflow/Repaint) để ứng dụng vận hành êm ái nhất.
+            </p>
+
+            <!-- Khối thống kê: zoom-in so le -->
+            <div class="stats-grid">
+              <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                <span class="stat-number">3+</span>
+                <span class="stat-label">Năm kinh nghiệm</span>
+              </div>
+              <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                <span class="stat-number">25+</span>
+                <span class="stat-label">Dự án hoàn thành</span>
+              </div>
+              <div class="stat-item" data-aos="zoom-in" data-aos-delay="500">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Khách hàng hài lòng</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HOẠT ĐỘNG 3: SECTION 3 - SKILLS SECTION
+         Hiệu ứng: zoom-in với độ trễ (delay) so le cho từng thẻ
+         ============================================================ -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">Kỹ Năng Chuyên Môn</h2>
+          <p class="section-subtitle">Các công cụ và công nghệ tôi sử dụng mỗi ngày</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="skill-icon">🌐</div>
+            <h4>HTML5 & Semantic</h4>
+            <p>Cấu trúc ngữ nghĩa, chuẩn Accessibility (A11y) và tối ưu SEO.</p>
+          </div>
+
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="180">
+            <div class="skill-icon">🎨</div>
+            <h4>CSS3 & Animations</h4>
+            <p>Flexbox, CSS Grid, Custom Properties và Keyframe mượt mà 60 FPS.</p>
+          </div>
+
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="260">
+            <div class="skill-icon">⚡</div>
+            <h4>Modern Front-end</h4>
+            <p>Xây dựng component có tính tái sử dụng cao, chuẩn kiến trúc BEM.</p>
+          </div>
+
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="340">
+            <div class="skill-icon">📱</div>
+            <h4>Responsive Design</h4>
+            <p>Tương thích hoàn hảo mọi kích thước màn hình từ điện thoại đến Desktop.</p>
+          </div>
+
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="420">
+            <div class="skill-icon">✨</div>
+            <h4>UI/UX Design</h4>
+            <p>Tư duy thiết kế trực quan, Micro-interactions tinh tế và phân tầng thông tin.</p>
+          </div>
+
+          <div class="skill-card" data-aos="zoom-in" data-aos-delay="500">
+            <div class="skill-icon">🚀</div>
+            <h4>Performance Refactor</h4>
+            <p>Tối ưu render engine, loại bỏ Reflow/Repaint với GPU Acceleration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HOẠT ĐỘNG 3: SECTION 4 - PROJECTS SECTION
+         Hiệu ứng: fade-up với delay so le
+         ============================================================ -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">Dự Án Tiêu Biểu</h2>
+          <p class="section-subtitle">Một số sản phẩm thực tế đã được tinh chỉnh hiệu năng</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Card Dự Án 1 -->
+          <article class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+            <div class="project-banner banner-1">
+              <span class="project-tag">E-Commerce</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Cửa Hàng Công Nghệ Số</h3>
+              <p class="project-desc">
+                Nền tảng thương mại điện tử giao diện dark-mode, tối ưu giỏ hàng và thanh toán nhanh chóng.
+              </p>
+              <div class="project-techs">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Flexbox</span>
+              </div>
+              <div class="project-links">
+                <a href="#projects" class="project-btn">Xem Live Demo →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card Dự Án 2 -->
+          <article class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="250">
+            <div class="project-banner banner-2">
+              <span class="project-tag">Dashboard</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Bảng Quản Trị Phân Tích</h3>
+              <p class="project-desc">
+                Giao diện quản lý thông số với biểu đồ tương tác, animation hiển thị dữ liệu realtime.
+              </p>
+              <div class="project-techs">
+                <span>CSS Grid</span>
+                <span>Responsive</span>
+                <span>AOS</span>
+              </div>
+              <div class="project-links">
+                <a href="#projects" class="project-btn">Xem Live Demo →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card Dự Án 3 -->
+          <article class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+            <div class="project-banner banner-3">
+              <span class="project-tag">Landing Page</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Ứng Dụng Chăm Sóc Sức Khỏe</h3>
+              <p class="project-desc">
+                Trang đích giới thiệu ứng dụng di động với micro-animations và hiệu ứng cuộn trang mượt mà.
+              </p>
+              <div class="project-techs">
+                <span>HTML/CSS</span>
+                <span>Keyframes</span>
+                <span>GPU Transform</span>
+              </div>
+              <div class="project-links">
+                <a href="#projects" class="project-btn">Xem Live Demo →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HOẠT ĐỘNG 3: SECTION 5 - CONTACT SECTION
+         Hiệu ứng: zoom-in toàn bộ card liên hệ
+         ============================================================ -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-box" data-aos="zoom-in" data-aos-duration="800">
+          <h2 class="contact-title">Sẵn Sàng Hợp Tác Trong Dự Án Tiếp Theo?</h2>
+          <p class="contact-desc">
+            Hãy liên hệ với tôi để cùng nhau trao đổi ý tưởng và xây dựng những sản phẩm tuyệt vời!
+          </p>
+          <div class="contact-buttons">
+            <a href="mailto:contact@nguyenmana.dev" class="btn btn-primary">Gửi Email Cho Tôi</a>
+            <a href="#hero" class="btn btn-secondary">Về Đầu Trang ↑</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 Nguyễn Văn A. Thiết kế tối giản, chuẩn SEO & hiệu năng cao.</p>
+    </div>
+  </footer>
+
+  <!-- ==============================================================
+       HOẠT ĐỘNG 3: CDN VÀ KHỞI TẠO AOS TRỰC TIẾP TRONG FILE HTML
+       (Gọn gàng trong 4 dòng, không cần tạo thêm file script.js)
+       ============================================================== -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 750,        // Thời gian animation (ms)
+      easing: 'ease-out-cubic', // Gia tốc mượt tự nhiên
+      once: true,           // Chỉ chạy 1 lần khi cuộn tới, chống giật lag
+      offset: 80            // Khoảng cách kích hoạt trước khi chạm đáy
+    });
+  </script>
+</body>
+</html>

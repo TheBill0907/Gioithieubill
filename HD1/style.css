@@ -1,0 +1,64 @@
+/* Reset CSS cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  /* Nền thiên nhiên với lớp phủ gradient tối nhẹ để làm nổi bật nút */
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.35)),
+              url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+}
+
+/* Nút bấm chủ đề thiên nhiên */
+.nature-btn {
+  padding: 16px 36px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2d6a4f, #1b4332);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  /* Đổ bóng nhẹ ban đầu */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 
+              0 2px 4px rgba(27, 67, 50, 0.3);
+
+  /* Chuyển động mượt mà sử dụng cubic-bezier */
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+              background 0.3s ease;
+}
+
+/* Hiệu ứng khi hover chuột */
+.nature-btn:hover {
+  /* Nâng lên 3px */
+  transform: translateY(-10px);
+
+  /* Đổ bóng sâu và đậm hơn */
+  box-shadow: 0 10px 22px rgba(212, 115, 115, 0.35), 
+              0 6px 12px rgba(45, 106, 79, 0.45);
+
+  /* Nền sáng nhẹ hơn tạo sức sống */
+  background: linear-gradient(135deg, #e89cc5, #2d6a4f);
+}
+
+/* Hiệu ứng khi nhấp chuột (Active) */
+.nature-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(239, 22, 22, 0.25);
+  transition-duration: 0.1s;
+}
